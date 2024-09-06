@@ -24,7 +24,6 @@ linha()
 
 numeros = []
 total = []
-romano = []
 
 def soma():
     while True:
