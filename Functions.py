@@ -1,9 +1,11 @@
 import random
 import math
 
+#Linha usada para demilitar 
 def linha():
     print("="*90)
 
+#Menu que mostra as opções que o usuário possui
 def menu():
         print('''Escolha a função que você deseja utilizar:
 [1] - Soma os números
@@ -25,6 +27,7 @@ linha()
 numeros = []
 total = []
 
+#Função de soma
 def soma():
     while True:
         num = int(input("Digite os número para somar: "))
@@ -33,17 +36,20 @@ def soma():
         if num == 0:
             print("A soma é: "+str(sum(total)))
             break
-            
+
+#Função que transforma os números em sua versão binária
 def binario():
     A = bin(int(input("Digite um número para converter para binário: ")))
     numerobinario = str(A)
     print("O número em binário é: "+numerobinario[2:])
-    
+
+#Função que transforma os números em sua versão octal
 def octal():
     B = oct(int(input("Digite o número para converter para octal: ")))
     numerooctal = str(B)
     print("O número em octal é: "+numerooctal[2:])
 
+#Função que cálcula a média dos números selecionados pelo usuário
 def media():
     while True:
         lista = int(input("Escolha quais números você deseja adicionar para calcular a média: "))
@@ -52,13 +58,15 @@ def media():
             print("A média é: "+str(media))
             break
         numeros.append(lista)
-        
+
+#Função que transforma os números em sua versão hexadecimal
 def hexadecimal():
     H = hex(int(input("Digite um número para converter em hexadecimal: ")))
     C = str(H)
     numerohexa = C.upper()
     print("O número em hexadecimal é: "+numerohexa[2:])
 
+#Função que cálcula 
 def Fibonacci():
     D = int(input("Escolha o número para calcular a sequência de Fibonacci: "))
     i = 1
@@ -69,6 +77,7 @@ def Fibonacci():
             i += 1
     print(fib)
 
+#Função onde o usuário deve acertar um número aleatório escolhido pelo sistema
 def game():
     print("Seu objetivo é acertar o número que o cumputador escolher")
     jogador = int(input("Escolha um número entre 1 e 4: "))
@@ -80,6 +89,7 @@ def game():
     else:
         print("Você perdeu!")
 
+#Função calcula o fatorial de um número escolhido pelo usuário
 def fatorial():
     num = int(input("Digite um número para calcular seu fatorial: "))
     fact = 1
@@ -87,11 +97,13 @@ def fatorial():
         fact = fact * i
     print("O fatorial do número escolhido é: "+str(fact))
 
+#Função que calcula a raiz quadrada do número escolhiso pelo usuário
 def raizquadrada():
     num = int(input("Digite um número para descobrir sua raiz quadrada: "))
     raiz = math.sqrt(num)
     print("A raiz quadrada do número escolhido é: "+str(raiz))        
-   
+
+#Função que calcula os número divisíveis do número escolhido pelo usuário
 def divisiveis():
     num = int(input("Digite um número para descobrir seus divisíveis: "))
     lista = []
@@ -101,6 +113,7 @@ def divisiveis():
             lista.append(i)
     print(lista)    
 
+#Função que calcula a área e o volume de uma esfera baseado no tamanho definido pelo usuário
 def volume():
     radius = float(input("Digite o tamanho da esfera: "))
     areasup = 4*math.pi*(radius**2)
@@ -108,16 +121,19 @@ def volume():
     print(f"A área é de: {(areasup):.2f}")
     print(f"O volume é de: {(volum):.2f}")
 
+#Função que converte a temperatura de celsius para farenheint
 def celsius():
     temp = int(input("Digite a temperatura que você deseja converter: "))
     farenheint = (9/5 * temp) + 32
     print(f"A temperatura convertida é equivalente a: {(farenheint):.1f}F")
 
+#Função que converte a temperatura de celsius para kelvin
 def kelvin():
     temp = int(input("Digite a temperatura que você deseja converter: "))
     k = temp + 273
     print("A temperatura convertido é equivalente a: "+str(k)+"K")
 
+#Realiza todas as funções
 while True:
     menu()
     
